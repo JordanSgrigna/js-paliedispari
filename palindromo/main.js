@@ -21,7 +21,7 @@ function firstPalinCheck(string){
     //La stringa viene rimessa insieme
     let userStringJoined = singleDigitArrayReversed.join("");
 
-    if(userString == userStringJoined){
+    if(string == userStringJoined){
         return "Palindromo"
     }
 

@@ -2,7 +2,6 @@
 
 // Richiesta dell'input dall'utente
 let userString = prompt("Quale numero o parola vuoi verificare?");
-
 let palindromeCheck = secondPalinCheck(userString);
 console.log(palindromeCheck);
 
@@ -14,9 +13,9 @@ console.log(palindromeCheck);
 
 function firstPalinCheck(string){
     //Trasformo la stringa dell'utente in minuscolo in caso ci siano maiuscole
-    userString = userString.toLowerCase();
+    string = string.toLowerCase();
     //La stringa viene convertita in array
-    let userStringIntoArray = userString.split("");
+    let userStringIntoArray = string.split("");
     //La stringa viene messa al contrario
     let singleDigitArrayReversed = userStringIntoArray.reverse();
     //La stringa viene rimessa insieme
@@ -32,13 +31,13 @@ function firstPalinCheck(string){
 
 
 function secondPalinCheck(string){
-    userString = userString.toLowerCase();
+    string = string.toLowerCase();
     //Lunghezza della stringa
-    let stringLength = userString.length;
+    let stringLength = string.length;
 
     for(let i = 0; i < stringLength; i++){
         //Check delle lettere sono uguali alla posizione opposta. (stringLength - 1 -i) presa su internet.
-        if(userString[i] == userString[stringLength - 1 - i]){
+        if(string[i] == string[stringLength - 1 - i]){
             return "Palindromo"
         }
 

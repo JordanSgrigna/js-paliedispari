@@ -37,13 +37,13 @@ function secondPalinCheck(string){
 
     for(let i = 0; i < stringLength; i++){
         //Check delle lettere sono uguali alla posizione opposta. (stringLength - 1 -i) presa su internet.
-        if(string[i] == string[stringLength - 1 - i]){
-            return "Palindromo"
+        if(string[i] !== string[stringLength - 1 - i]){
+            return "Non è palindromo"
         }
 
     }
 
-    return "Non è palindromo"
+    return "Palindromo"
     
 
 }

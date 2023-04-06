@@ -11,17 +11,17 @@ console.log(palindromeCheck);
 
 //-------------- FUNZIONI ---------------------------------
 
-function firstPalinCheck(string){
+function firstPalinCheck(stringa){
     //Trasformo la stringa dell'utente in minuscolo in caso ci siano maiuscole
-    string = string.toLowerCase();
+    stringa = stringa.toLowerCase();
     //La stringa viene convertita in array
-    let userStringIntoArray = string.split("");
-    //La stringa viene messa al contrario
+    let userStringIntoArray = stringa.split("");
+    //Gli elementi dell'array vengono messi al contrario
     let singleDigitArrayReversed = userStringIntoArray.reverse();
-    //La stringa viene rimessa insieme
+    //L'array viene convertito in stringa
     let userStringJoined = singleDigitArrayReversed.join("");
 
-    if(string == userStringJoined){
+    if(stringa == userStringJoined){
         return "Palindromo"
     }
 
@@ -30,14 +30,14 @@ function firstPalinCheck(string){
 
 
 
-function secondPalinCheck(string){
-    string = string.toLowerCase();
+function secondPalinCheck(stringa){
+    stringa = stringa.toLowerCase();
     //Lunghezza della stringa
     let stringLength = string.length;
 
-    for(let i = 0; i < stringLength; i++){
-        //Check delle lettere sono uguali alla posizione opposta. (stringLength - 1 -i) presa su internet.
-        if(string[i] !== string[stringLength - 1 - i]){
+    for(let i = 0; i < Math.floor(stringLength / 2); i++){
+        //Check delle lettere uguali alla posizione opposta. (stringLength - 1 -i) presa su internet.
+        if(stringa[i] !== stringa[stringLength - 1 - i]){
             return "Non è palindromo"
         }
 
